@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kyoto &amp; Osaka Travel Journal 2026</title>
+<style>
+:root{--bg:#faf6ee;--card:#fffdf8;--line:#e3d8c4;--ink:#4a3a2c;--mute:#8a7966;--blue:#a9bfd0;--blue2:#e4edf3;--oat:#efe5d2;--dk:#3b2d22;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241d17;--card:#2e251d;--line:#4a3d30;--ink:#efe5d2;--mute:#b3a28c;--blue:#6f8ba0;--blue2:#2c3a45;--oat:#3a2f24;--dk:#efe5d2;color-scheme:dark}}
+html{scroll-padding-top:70px}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Serif TC","Songti TC",Georgia,serif;line-height:1.7}
+a{color:inherit}.sans{font-family:-apple-system,"Noto Sans TC","PingFang TC",sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:8px 10px}
+nav a{white-space:nowrap;text-decoration:none;padding:6px 13px;border-radius:99px;font-size:14px;color:var(--mute)}
+nav a.on{background:var(--dk);color:var(--bg)}
+main{max-width:920px;margin:auto;padding:16px 16px 60px}
+.hero{border-radius:22px;padding:56px 24px 40px;background:linear-gradient(160deg,var(--blue2),var(--oat) 60%,#e8d5b8);border:1px solid var(--line);position:relative;overflow:hidden}
+.hero:after{content:"京";position:absolute;right:-6px;bottom:-60px;font-size:230px;opacity:.07;line-height:1}
+.hero small{letter-spacing:.3em;color:var(--mute)}.hero h1{font-size:clamp(30px,8vw,52px);font-weight:400;margin:.2em 0;letter-spacing:.04em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px 18px;margin:12px 0}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+h2{font-weight:400;font-size:24px;margin:28px 0 6px;letter-spacing:.06em}h3{font-weight:500;margin:0}
+.chip{display:inline-block;font-size:12px;padding:2px 10px;border-radius:99px;background:var(--oat);color:var(--mute);margin:2px 4px 2px 0}
+.warn{background:#f3e3cf;color:#5a3d1e;border-color:#dcc29a}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .warn{background:#4a3a24;color:#f1ddbc}}
+.tl{border-left:2px solid var(--line);margin-left:46px;padding-left:20px}
+.st{position:relative;padding:4px 0 8px}.st:before{content:"";position:absolute;left:-27px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--blue);border:2px solid var(--bg)}
+.st .t{position:absolute;left:-84px;top:5px;width:46px;text-align:right;font-size:13px;color:var(--mute)}
+.ph{height:84px;border-radius:12px;background:linear-gradient(135deg,var(--blue2),var(--oat));display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:26px;letter-spacing:.2em;margin-top:6px}
+.go{font-size:12px;color:var(--mute);padding:2px 0 8px}
+.btn{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 14px;border-radius:99px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.p{background:var(--dk);color:var(--bg);border-color:var(--dk)}
+input,select{font:inherit;font-size:14px;padding:7px 10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);max-width:100%}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.days{display:flex;gap:6px;overflow-x:auto;padding:4px 0}
+.days .btn.on{background:var(--dk);color:var(--bg)}
+.wall{columns:2 140px;column-gap:10px}.wall img{width:100%;border-radius:12px;margin-bottom:10px;cursor:zoom-in;display:block}
+.lb{position:fixed;inset:0;background:#000d;display:flex;align-items:center;justify-content:center;z-index:99}.lb img{max-width:94%;max-height:90%;border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:14px}td,th{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}
+.big{font-size:28px}.done{text-decoration:line-through;opacity:.5}
+</style></head><body>
+<nav id="nav"></nav><main id="app"></main>
+<script>
+/* ===== 想改內容？只需修改這個 DATA 區塊 ===== */
+const maps=q=>"https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(q);
+const DATA={
+ people:["成員1","成員2","成員3"],
+ stays:{
+  kyoto:{n:"20PIECES（京都）",addr:"63 Shokuyacho, Shimogyo Ward, Kyoto 600-8158",tel:"+81 75-644-5890",nights:"12/03–12/06（3 晚）"},
+  osaka:{n:"MIMARU 大阪 難波 STATION ANNEX",addr:"3 Chome-6-4 Nipponbashi, Naniwa Ward, Osaka 556-0005",tel:"待確認",nights:"12/06–12/08（2 晚）"}},
+ days:[
+ {d:1,date:"12/03 四",title:"啟程・抵達京都・東寺夜楓",stay:"kyoto",items:[
+  {t:"02:15",n:"信閎車業（出發）",s:"—",go:"🚗 2 小時 8 分"},
+  {t:"04:23",n:"桃園機場第一航廈",s:"約 2 小時 37 分（至 07:00）",go:"✈ 航班 07:00 起飛",note:"已依你的更正，航班時間為 07:00"},
+  {t:"10:25",n:"關西國際機場",s:"3 小時",go:"🚗 1 小時 24 分（接送 13:30）"},
+  {t:"14:49",n:"20PIECES",s:"1 小時",go:"🚶 4 分",note:"辦理入住／寄放行李",stay:1},
+  {t:"17:00",n:"京的燒肉處 弘 京都站前店",s:"約 1 小時 30 分",go:"🚌 15 分",food:1,note:"晚餐 17:00 或 17:30 入席（需訂位）。入住後到晚餐前自由休息"},
+  {t:"18:40",n:"東寺（教王護國寺）",s:"1 小時",note:"點燈活動每晚 18:00–21:30，21:00 停止售票入場，需另外買票。票價：待確認"}]},
+ {d:2,date:"12/04 五",title:"嵐山竹林・古城巡禮",stay:"kyoto",items:[
+  {t:"08:00",n:"20PIECES（出發）",s:"—",go:"🚌 29 分",stay:1},
+  {t:"08:29",n:"JR 嵯峨嵐山站",q:"JR嵯峨嵐山駅",s:"—",go:"🚶 24 分",note:"原定 9:30 嵐山小火車因無票已取消"},
+  {t:"08:53",n:"嵐山公園 龜山地區",s:"1 小時",go:"🚶 13 分"},
+  {t:"10:06",n:"天龍寺",s:"1 小時",go:"🚶 8 分"},
+  {t:"11:14",n:"嵐山商店街",s:"約 2 小時（含午餐）",go:"🚶 2 分",note:"午餐當天再決定"},
+  {t:"13:16",n:"渡月橋",s:"約 50 分鐘",go:"🚌 50 分"},
+  {t:"15:00",n:"二條城",s:"1 小時",go:"視時間再前往御金神社",note:"最後入城時間 16:00；15:00 抵達，約有 1 小時可參觀"},{t:"16:30",n:"御金神社（若時間允許）",s:"視情況",note:"選擇性行程；交通時間與開放時間：待確認"}]},
+ {d:3,date:"12/05 六",title:"古都文化漫步・四条河原町",stay:"kyoto",items:[
+  {t:"07:00",n:"20PIECES（出發）",s:"—",go:"🚌 26 分",stay:1,note:"xlsx：客美多咖啡早餐；公車 206 往五條坂（07:05/16/22/28）"},
+  {t:"07:26",n:"清水寺",s:"3 小時",go:"🚶 18 分"},
+  {t:"10:44",n:"八坂神社",s:"30 分鐘",go:"🚶 4 分"},
+  {t:"11:19",n:"祇園花見小路",s:"1 小時 30 分",go:"🚶 4 分",note:"兩側私人小巷禁止拍照（簡報提醒，罰款最高 1 萬日圓）"},
+  {t:"12:52",n:"祇園白川",s:"—",go:"🚶 9 分",note:"午餐：當天視情況再決定（候選：富之上，需訂位）"},
+  {t:"13:01",n:"鴨川納涼床",s:"—",go:"🚶 7 分"},
+  {t:"13:08",n:"四條河原町",s:"5 小時",note:"逛街；晚餐當天視情況再決定。xlsx：京都高島屋"}]},
+ {d:4,date:"12/06 日",title:"金閣・勝尾寺・初訪大阪",stay:"osaka",items:[
+  {t:"08:00",n:"20PIECES（退房）",s:"—",go:"🚐 包車 26 分",stay:1},
+  {t:"08:26",n:"金閣寺",s:"1 小時 30 分",go:"🚐 包車 8 分"},
+  {t:"10:04",n:"北野天滿宮",s:"2 小時 30 分",go:"🚐 包車 1 小時 10 分",note:"參觀完後在附近吃午餐（餐廳待確認）"},
+  {t:"13:44",n:"勝尾寺",s:"1 小時 30 分",go:"🚐 包車 7 分"},
+  {t:"15:21",n:"箕面大滝",s:"1 小時 30 分",go:"🚐 包車 42 分",note:"全日包車行程"},
+  {t:"17:33",n:"MIMARU 大阪 難波 STATION ANNEX",s:"30 分鐘",go:"🚶 15 分",stay:2},
+  {t:"18:18",n:"晚餐（道頓堀周邊）",q:"道頓堀",s:"約 1 小時",note:"晚餐地點當天視情況決定（候選：和和鍋 道頓堀店／Nikoniko Nabe Dotonbori，兩者店名不同，選定前請先確認）"}]},
+ {d:5,date:"12/07 一",title:"大阪名勝・梅田購物",stay:"osaka",items:[
+  {t:"08:00",n:"MIMARU 大阪 難波 STATION ANNEX",s:"—",go:"🚶 15 分",stay:2},
+  {t:"08:14",n:"難波八阪神社",s:"40 分鐘",go:"🚌 21 分"},
+  {t:"09:15",n:"通天閣",s:"2 小時 30 分",go:"🚌 22 分",note:"午餐（xlsx）：福太郎大阪燒"},
+  {t:"12:07",n:"梅田（阪急百貨店前）",s:"下午之後逛梅田",note:"下午之後都在梅田地區逛街。xlsx 候選：梅田各大百貨、Shake Shack 阪神梅田店、新梅田食堂街章魚燒、梅田空中庭園展望台（營業時間待確認）"}]},
+ {d:6,date:"12/08 二",title:"大阪城・滿載賦歸",stay:"osaka",items:[
+  {t:"08:00",n:"MIMARU 大阪 難波 STATION ANNEX",s:"—",go:"🚌 37 分",stay:2},
+  {t:"08:36",n:"大阪城",s:"1 小時 50 分",go:"🚌 35 分"},{t:"11:00",n:"難波商圈",s:"逛街至約 15:00",note:"其餘時間在難波逛街（xlsx：Rikuro's 起司蛋糕、CANELÉ du JAPON 可麗露）"},
+  {t:"15:00",n:"MIMARU 大阪 難波 STATION ANNEX",s:"取行李・集合",go:"🚐 包車約 47 分",stay:2,note:"預計 15:55 抵達機場；包車需預留交通時間，建議不晚於 15:00 出發"},
+  {t:"15:55",n:"關西國際機場第 1 航廈",s:"辦理登機",go:"✈ 18:55 起飛，飛行約 3 小時 25 分",note:"預計 15:55 抵達；航班 18:55 起飛，21:20 抵達桃園（台灣時間）"}]}],
+ food:[
+  {n:"京的燒肉處 弘 京都站前店",day:1,dish:"燒肉晚餐（17:00 或 17:30，需訂位）",tr:"飯店步行約 4 分"},
+  {n:"客美多咖啡 Komeda（xlsx 早餐，分店待確認）",day:3,dish:"早餐套餐",tr:"待確認"},
+  {n:"京都和牛壽喜燒涮涮鍋 富之上 祇园本店",day:3,dish:"和牛壽喜燒／涮涮鍋（需訂位；候選，當天視情況決定）",tr:"八坂神社附近，待確認"},
+  {n:"和和鍋 道頓堀店 / Nikoniko Nabe Dotonbori",day:4,dish:"壽喜燒・日式火鍋（候選，當天視情況決定）",tr:"飯店步行約 15 分"},
+  {n:"福太郎 大阪燒",day:5,dish:"大阪燒",tr:"待確認"},
+  {n:"新梅田食堂街（章魚燒）",day:5,dish:"章魚燒",tr:"待確認"},
+  {n:"SHAKE SHACK 阪神梅田店",day:5,dish:"漢堡（點心）",tr:"待確認"},
+  {n:"Rikuro's Cheesecake Namba Marui",day:6,dish:"起司蛋糕（伴手禮）",tr:"待確認"},
+  {n:"CANELÉ du JAPON Nagahoribashi Store",day:6,dish:"可麗露（伴手禮）",tr:"待確認"}],
+ todo:["護照（效期 6 個月以上）","機票／電子登機證","租車／專車接送文件","Visit Japan Web 填寫","保暖外套、發熱衣","手套・圍巾・帽子","相機／手機、充電器、行動電源、轉接頭","盥洗用品","網路 SIM／Wifi 機","日幣現金／信用卡","東寺點燈票","預約富之上（午／晚）","確認嵐山小火車票","確認二條城入場時間"],
+ weather:[["京都 JMA","https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=260000"],["大阪 JMA","https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=270000"],["京都 tenki.jp","https://tenki.jp/forecast/6/29/6110/26100/"],["大阪 tenki.jp","https://tenki.jp/forecast/6/30/6200/27100/"],["嵐山 Google 天氣","https://www.google.com/search?q=嵐山+天氣"],["箕面 Google 天氣","https://www.google.com/search?q=箕面+天氣"]]
+};
+/* ===== 儲存（localStorage，失敗時用記憶體）===== */
+const mem={};const ST={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):(mem[k]??d)}catch(e){return mem[k]??d}},set(k,v){mem[k]=v;try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const $=s=>document.querySelector(s),app=$("#app"),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pages=[["home","首頁"],["day","每日行程"],["food","餐廳"],["budget","預算"],["photos","相簿"],["list","清單"],["weather","天氣"],["check","待確認"]];
+let curDay=1;
+function route(){const h=(location.hash||"#home").slice(1);const m=h.match(/^day(\d)$/);if(m){curDay=+m[1];}
+ const p=m?"day":(pages.some(x=>x[0]==h)?h:"home");
+ $("#nav").innerHTML=pages.map(([k,l])=>`<a href="#${k}" class="${k==p?"on":""}">${l}</a>`).join("");
+ app.innerHTML="";R[p]();window.scrollTo(0,0)}
+addEventListener("hashchange",route);
+const R={};
+R.home=()=>{app.innerHTML=`<div class="hero"><small class="sans">2026.12.03 — 2026.12.08</small><h1>Kyoto &amp; Osaka<br>TRAVEL JOURNAL</h1><p>六天五夜，從東寺的夜楓、嵐山的竹林，到道頓堀的燈火與大阪城。</p></div>
+<div class="grid"><div class="card"><h3>天數</h3>6 天 5 夜</div><div class="card"><h3>住宿城市</h3>京都 3 晚 → 大阪 2 晚</div><div class="card"><h3>交通</h3>Day 4 全日包車；其餘以 JR／公車／步行為主（Day 1、6 往返機場為包車）</div><div class="card"><h3>同行</h3>3 人（子女帶爸媽出遊）</div></div>
+<h2>六天快速導覽</h2>${DATA.days.map(d=>`<a class="card" style="display:block;text-decoration:none" href="#day${d.d}"><span class="chip">DAY ${d.d}</span><span class="chip">${d.date}</span><br><b>${d.title}</b></a>`).join("")}
+<h2>住宿</h2>${Object.values(DATA.stays).map(s=>`<div class="card"><b>${s.n}</b> <span class="chip">${s.nights}</span><br><small class="sans">${s.addr}　☎ ${s.tel}</small><br><a class="btn" target="_blank" href="${maps(s.n+" "+s.addr)}">Google Maps</a></div>`).join("")}`};
+R.day=()=>{const d=DATA.days[curDay-1],S=DATA.stays[d.stay];
+ const names=d.items.map(i=>i.q||i.n.replace(/（.*?）/g,""));
+ const route=names.length>1?`https://www.google.com/maps/dir/?api=1&travelmode=${d.d==4?"driving":"transit"}&origin=${encodeURIComponent(names[0])}&destination=${encodeURIComponent(names.at(-1))}&waypoints=${encodeURIComponent(names.slice(1,-1).slice(0,8).join("|"))}`:"";
+ app.innerHTML=`<div class="days sans">${DATA.days.map(x=>`<a class="btn ${x.d==curDay?"on":""}" href="#day${x.d}">DAY ${x.d}</a>`).join("")}</div>
+ <h2 style="margin-top:12px"><span class="chip">DAY ${d.d}</span> ${d.date}<br>${d.title}</h2>
+ <a class="btn p" target="_blank" href="${route}">🗺 當日完整路線（${d.d==4?"包車":"公共運輸"}）</a>
+ <div class="card" style="margin-top:14px">🛏 住宿：<b>${S.n}</b><br><small class="sans">${S.addr}</small></div>
+ <div class="tl" style="margin-top:22px">${d.items.map((i,k)=>{const q=i.q||i.n.replace(/（.*?）/g,"");return`<div class="st"><span class="t sans">${i.t}</span><b>${esc(i.n)}</b> ${i.s&&i.s!="—"?`<span class="chip">停留 ${i.s}</span>`:""}
+ ${i.note?`<div class="${i.note.startsWith("⚠")?"card warn":""}" style="font-size:14px;${i.note.startsWith("⚠")?"padding:8px 12px;margin:6px 0":""}">${esc(i.note)}</div>`:""}
+ <div class="ph">${esc(q.slice(0,2))}</div>
+ <div style="margin-top:6px"><a class="btn" target="_blank" href="${maps(q)}">📍 導航</a> <small class="sans" style="color:var(--mute)">地址：以 Google Maps 為準</small></div>
+ ${i.go?`<div class="go">↓ ${i.go}</div>`:""}</div>`}).join("")}</div>
+ <h2>當日餐廳</h2>${DATA.food.filter(f=>f.day==d.d).map(f=>`<div class="card"><b>${f.n}</b><br><small class="sans">推薦：${f.dish}</small></div>`).join("")||'<div class="card">尚未安排</div>'}`};
+R.food=()=>{app.innerHTML=`<h2>餐廳專區</h2><div class="card warn">餐廳來自你的 xlsx 與簡報。營業時間、公休日、價格我無法即時確認，一律標示「待確認」，請以 Google Maps／官網為準。</div>`+DATA.food.map(f=>`<div class="card"><span class="chip">DAY ${f.day}</span><b>${f.n}</b><div class="ph" style="height:56px">🍽</div><small class="sans">推薦：${f.dish}<br>營業時間：待確認　公休：待確認　價位：待確認<br>交通：${f.tr}</small><br><a class="btn" target="_blank" href="${maps(f.n.split(/[（/]/)[0]+" 日本")}">📍 Google Maps</a></div>`).join("")};
+/* 預算 */
+R.budget=()=>{let B=ST.get("b",{rate:0.21,goal:150000,items:[],people:DATA.people}),ed=-1;
+ const cats=["機票","住宿","餐飲","購物","景點門票","其他"];
+ const twd=i=>(+i.twd||0)+(+i.jpy||0)*B.rate;
+ const draw=()=>{const tot=B.items.reduce((a,i)=>a+twd(i),0),per=B.people.map(p=>B.items.filter(i=>i.who==p).reduce((a,i)=>a+twd(i),0));
+ const bycat=cats.map(c=>[c,B.items.filter(i=>i.cat==c).reduce((a,i)=>a+twd(i),0)]);
+ const e=ed>=0?B.items[ed]:{cat:"餐飲",name:"",jpy:"",twd:"",who:B.people[0]};
+ app.innerHTML=`<h2>旅行預算</h2><div class="card"><div class="row sans">匯率 1 JPY = <input id="rt" type="number" step="0.001" value="${B.rate}" style="width:80px"> TWD　預算 <input id="gl" type="number" value="${B.goal}" style="width:100px"> TWD</div>
+ <p class="big">總花費 NT$ ${Math.round(tot).toLocaleString()}</p><p class="sans">預算差額：<b>${B.goal-tot>=0?"尚餘":"超支"} NT$ ${Math.abs(Math.round(B.goal-tot)).toLocaleString()}</b></p>
+ ${bycat.map(([c,v])=>`<span class="chip">${c} ${Math.round(v).toLocaleString()}</span>`).join("")}</div>
+ <div class="card"><b>${ed>=0?"修改支出":"新增支出"}</b><div class="row sans" style="margin-top:8px"><select id="c">${cats.map(c=>`<option ${c==e.cat?"selected":""}>${c}</option>`).join("")}</select><input id="n" placeholder="項目" value="${esc(e.name)}"><input id="j" type="number" placeholder="日幣 JPY" value="${e.jpy}" style="width:110px"><input id="w" type="number" placeholder="台幣 TWD" value="${e.twd}" style="width:110px"><select id="p">${B.people.map(p=>`<option ${p==e.who?"selected":""}>${esc(p)}</option>`).join("")}</select><button class="btn p" id="ok">${ed>=0?"儲存":"新增"}</button>${ed>=0?'<button class="btn" id="cx">取消</button>':""}</div></div>
+ <div class="card" style="overflow-x:auto"><table class="sans"><tr><th>類別</th><th>項目</th><th>JPY</th><th>TWD</th><th>合計NT$</th><th>付款</th><th></th></tr>${B.items.map((i,k)=>`<tr><td>${i.cat}</td><td>${esc(i.name)}</td><td>${i.jpy||""}</td><td>${i.twd||""}</td><td>${Math.round(twd(i))}</td><td>${esc(i.who)}</td><td><button class="btn" data-e="${k}">改</button> <button class="btn" data-x="${k}">刪</button></td></tr>`).join("")||'<tr><td colspan=7>尚無支出</td></tr>'}</table></div>
+ <div class="card"><b>誰付了多少</b>（點名字可改）<div class="row sans" style="margin-top:6px">${B.people.map((p,k)=>`<span class="chip" data-r="${k}" style="cursor:pointer">${esc(p)}：NT$ ${Math.round(per[k]).toLocaleString()}</span>`).join("")}</div><small class="sans">平均每人 NT$ ${Math.round(tot/B.people.length).toLocaleString()}</small></div>`;
+ const sv=()=>ST.set("b",B);
+ $("#rt").onchange=x=>{B.rate=+x.target.value||0.21;sv();draw()};$("#gl").onchange=x=>{B.goal=+x.target.value||0;sv();draw()};
+ $("#ok").onclick=()=>{const it={cat:$("#c").value,name:$("#n").value,jpy:$("#j").value,twd:$("#w").value,who:$("#p").value};if(!it.name)return;ed>=0?B.items[ed]=it:B.items.push(it);ed=-1;sv();draw()};
+ if($("#cx"))$("#cx").onclick=()=>{ed=-1;draw()};
+ document.querySelectorAll("[data-e]").forEach(b=>b.onclick=()=>{ed=+b.dataset.e;draw()});
+ document.querySelectorAll("[data-x]").forEach(b=>b.onclick=()=>{B.items.splice(+b.dataset.x,1);sv();draw()});
+ document.querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{const k=+b.dataset.r,nn=prompt("成員名稱",B.people[k]);if(nn){B.items.forEach(i=>{if(i.who==B.people[k])i.who=nn});B.people[k]=nn;sv();draw()}})};draw()};
+/* 相簿：圖片縮到 1000px 存入 IndexedDB */
+const idb=()=>new Promise((res,rej)=>{const r=indexedDB.open("kj",1);r.onupgradeneeded=()=>r.result.createObjectStore("p",{keyPath:"id",autoIncrement:true});r.onsuccess=()=>res(r.result);r.onerror=rej});
+const tx=async(m,f)=>{const d=await idb();return new Promise((res,rej)=>{const t=d.transaction("p",m),o=f(t.objectStore("p"));t.oncomplete=()=>res(o.result);t.onerror=rej})};
+const shrink=f=>new Promise(r=>{const im=new Image,u=URL.createObjectURL(f);im.onload=()=>{const s=Math.min(1,1000/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*s;c.height=im.height*s;c.getContext("2d").drawImage(im,0,0,c.width,c.height);r(c.toDataURL("image/jpeg",.8))};im.src=u});
+let pd=1;
+R.photos=async()=>{let all=[];try{all=await tx("readonly",s=>s.getAll())}catch(e){}
+ const draw=()=>{const L=all.filter(p=>p.day==pd);app.innerHTML=`<h2>旅行相簿</h2><div class="days sans">${DATA.days.map(x=>`<button class="btn ${x.d==pd?"on":""}" data-d="${x.d}">DAY ${x.d}</button>`).join("")}</div>
+ <div class="row sans" style="margin:10px 0"><label class="btn p">＋ 上傳照片<input id="up" type="file" accept="image/*" multiple hidden></label><small>存在這支手機／瀏覽器內（朋友看不到你的照片）</small></div>
+ <div class="wall">${L.map(p=>`<img src="${p.src}" data-id="${p.id}">`).join("")||'<div class="card">這天還沒有照片</div>'}</div>`;
+ document.querySelectorAll("[data-d]").forEach(b=>b.onclick=()=>{pd=+b.dataset.d;draw()});
+ $("#up").onchange=async e=>{for(const f of e.target.files){const src=await shrink(f);try{await tx("readwrite",s=>s.add({day:pd,src}))}catch(x){}}try{all=await tx("readonly",s=>s.getAll())}catch(x){}draw()};
+ document.querySelectorAll(".wall img").forEach(im=>{im.onclick=()=>{const l=document.createElement("div");l.className="lb";l.innerHTML=`<img src="${im.src}"><button class="btn" style="position:absolute;top:16px;right:16px" id="dl">刪除</button>`;l.onclick=ev=>{if(ev.target.id=="dl"){if(confirm("刪除這張？")){tx("readwrite",s=>s.delete(+im.dataset.id)).then(()=>{all=all.filter(p=>p.id!=im.dataset.id);l.remove();draw()})}}else l.remove()};document.body.append(l)}})};draw()};
+R.list=()=>{let L=ST.get("l",DATA.todo.map(t=>({t,d:0})));const sv=()=>ST.set("l",L);
+ const draw=()=>{const n=L.filter(x=>x.d).length;app.innerHTML=`<h2>旅行清單</h2><div class="card sans">完成 ${n} / ${L.length}<div class="row" style="margin-top:8px"><input id="ni" placeholder="新增項目" style="flex:1"><button class="btn p" id="ad">新增</button></div></div><div class="card">${L.map((x,k)=>`<div class="row" style="padding:5px 0"><input type="checkbox" data-k="${k}" ${x.d?"checked":""}><span class="${x.d?"done":""}" style="flex:1">${esc(x.t)}</span><button class="btn" data-x="${k}">✕</button></div>`).join("")}</div>`;
+ $("#ad").onclick=()=>{const v=$("#ni").value.trim();if(v){L.push({t:v,d:0});sv();draw()}};
+ document.querySelectorAll("[data-k]").forEach(c=>c.onchange=()=>{L[+c.dataset.k].d=c.checked?1:0;sv();draw()});
+ document.querySelectorAll("[data-x]").forEach(b=>b.onclick=()=>{L.splice(+b.dataset.x,1);sv();draw()})};draw()};
+R.weather=()=>{app.innerHTML=`<h2>天氣</h2><div class="card warn">網站發布後無法直接串接即時天氣，所以不顯示任何虛構數據。出發前請用下列官方／可靠來源查詢（含降雨機率、風速、警報）。</div><div class="grid">${DATA.weather.map(([n,u])=>`<a class="card btn" style="border-radius:18px" target="_blank" href="${u}">${n} ↗</a>`).join("")}</div>`};
+R.check=()=>{const rows=[];DATA.days.forEach(d=>d.items.forEach(i=>{if(i.note&&i.note.startsWith("⚠")||(i.note||"").includes("⚠"))rows.push([d.d,i.t,i.n,i.note.replace("⚠","").trim()])}));
+ const extra=[[0,"—","目前狀態","已無行程矛盾。剩餘為一般待確認項目：餐廳營業時間／價位、東寺票價、御金神社開放時間與交通、Day 6 的 15:00 飯店出發時間"]];
+ app.innerHTML=`<h2>待確認事項</h2><div class="card warn">我沒有擅自更動任何已確定行程，只標出以下矛盾。</div>`+[...rows,...extra].map(r=>`<div class="card"><span class="chip">${r[0]?"DAY "+r[0]:"全程"}</span><b>${esc(r[2])}</b> ${r[1]!="—"?`<small>(${r[1]})</small>`:""}<br><small class="sans">${esc(r[3])}</small></div>`).join("")};
+route();
+</script></body></html>
